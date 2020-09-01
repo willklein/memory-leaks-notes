@@ -2,14 +2,12 @@
 
 ## Presentation
 
-Video: coming soon
+Video: coming soon  
 Slides: coming soon
 
 ## Notes
 
 Confused about Stack and Heap? by Franziska Hinkelmann: https://medium.com/fhinkel/confused-about-stack-and-heap-2cf3e6adb771
-
-JavaScript primitives: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 JavaScript primitives: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
@@ -64,7 +62,7 @@ function getMessage(key) {
 }
 ```
 
-performance.measureMemory API
+### performance.measureMemory API
 
 Proposal on GitHub: https://github.com/WICG/performance-measure-memory
 
@@ -89,5 +87,7 @@ Full quote from Ulan Degenbaev, from https://web.dev/monitor-total-page-memory-u
 > Browsers manage the memory of web pages automatically. Whenever a web page creates an object, the browser allocates a chunk of memory "under the hood" to store the object. Since memory is a finite resource, the browser performs garbage collection to detect when an object is no longer needed and to free the underlying memory chunk. The detection is not perfect though, and it was proven that perfect detection is an impossible task. Therefore browsers approximate the notion of "an object is needed" with the notion of "an object is reachable". If the web page cannot reach an object via its variables and the fields of other reachable objects, then the browser can safely reclaim the object. The difference between these two notions leads to memory leaks
 
 ### Site Reliability Engineering
+
+> I didn't talk much about backend services, but here's some more thoughts on that
 
 If you're building services on the backend, look into topics of observability and site reliability engineering. Our dev ops friends can definitely help with this but it’s something you can pick up as you go. For more background, check out the set of Site Reliability Engineering books from the folks at Google and published by O’Reilly here: https://landing.google.com/sre/books/
