@@ -128,11 +128,13 @@ Full quote from Ulan Degenbaev, from https://web.dev/monitor-total-page-memory-u
 
 ## Contact
 
-Email: will@willklein.co
+Email: will@willklein.co  
 Twitter: [@willklein_](https://twitter.com/willklein_) (DM's always open)
 
 ### More thoughts
 
-> I didn't talk much about backend services, but here's some more thoughts on that
+I didn't talk much about backend services, but here's some more thoughts on that
+
+### Site Reliability Engineering
 
 If you're building services on the backend, look into topics of observability and site reliability engineering. Our dev ops friends can definitely help with this but it’s something you can pick up as you go. For more background, check out the set of Site Reliability Engineering books from the folks at Google and published by O’Reilly here: https://landing.google.com/sre/books/
