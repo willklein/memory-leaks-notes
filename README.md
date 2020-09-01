@@ -15,7 +15,11 @@ JavaScript objects (stuff that leaks): https://developer.mozilla.org/en-US/docs/
 
 Maximum call stack size exceeded example: https://github.com/christianalfoni/formsy-react/issues/298
 
-Debugging example, closure:
+### Debugging examples
+
+For the first one, the code is really immaterial.
+
+The second one involves a crazy closure that just grows memory usage until disaster:
 
 ```
   var run = function () {
@@ -41,6 +45,29 @@ Debugging example, closure:
 David Glasser's article: http://point.davidglasser.net/2013/06/27/surprising-javascript-memory-leak.html
 
 
+### Patterns and Pitfalls
+
+Globals
+
+```javascript
+globalVar = something;
+
+window.coolThing = somethingBetter;
+
+```
+Events & Callbacks
+
+```javascript
+document.addEventListener('click', clickHandler)
+
+// sometime later
+document.removeEventListener('click', clickHandler)
+
+```
+
+Mistakes, GitHub PR example with adding listeners twice: https://github.com/mattermost/mattermost-webapp/pull/585/files#diff-80a46c6ad8edb475be6ad3d466cf92c2
+
+
 Caching example (lru-cache):
 ```javascript
 // https://www.npmjs.com/package/lru-cache
@@ -51,8 +78,21 @@ var cache = new LRU(50) // max size of 50
 cache.set("MC", "Cassidy Williams")
 cache.get("MC") // "Cassidy Williams"
 ```
+Asynchronous timing example (setTimeout/setInterval)
 
-Basic closure:
+```javascript
+// woops, my slide had a copy/paste error
+
+setTimeout(sayHi, 2000);
+
+function sayHi () {
+  // this can go wrong a number of ways
+  // use setTimeout/setInterval, but with care
+}
+```
+
+
+Basic closure, for reference:
 
 ```javascript
 var closureScope = { functions: 'get me' }
