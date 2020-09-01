@@ -86,7 +86,12 @@ Full quote from Ulan Degenbaev, from https://web.dev/monitor-total-page-memory-u
 
 > Browsers manage the memory of web pages automatically. Whenever a web page creates an object, the browser allocates a chunk of memory "under the hood" to store the object. Since memory is a finite resource, the browser performs garbage collection to detect when an object is no longer needed and to free the underlying memory chunk. The detection is not perfect though, and it was proven that perfect detection is an impossible task. Therefore browsers approximate the notion of "an object is needed" with the notion of "an object is reachable". If the web page cannot reach an object via its variables and the fields of other reachable objects, then the browser can safely reclaim the object. The difference between these two notions leads to memory leaks
 
-### Site Reliability Engineering
+## Contact
+
+Email: will@willklein.co
+Twitter: [@willklein_](https://twitter.com/willklein_) (DM's always open)
+
+### More thoughts
 
 > I didn't talk much about backend services, but here's some more thoughts on that
 
