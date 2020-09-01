@@ -83,9 +83,9 @@ Asynchronous timing example (setTimeout/setInterval)
 ```javascript
 // woops, my slide had a copy/paste error
 
-setTimeout(sayHi, 2000);
+setTimeout(happensLater, 2000);
 
-function sayHi () {
+function happensLater () {
   // this can go wrong a number of ways
   // use setTimeout/setInterval, but with care
 }
